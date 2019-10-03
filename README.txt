@@ -16,7 +16,9 @@ datafiles = ['jetdata/jetImage_7_100p_30000_40000.h5',
             'jetdata/jetImage_7_100p_50000_60000.h5',
             'jetdata/jetImage_7_100p_10000_20000.h5',
             'jetdata/jetImage_7_100p_0_10000.h5']
-
+# You don't have to worry about the features. If you're interested, you can take a look at the following papers:
+* https://arxiv.org/pdf/1709.08705.pdf
+* https://arxiv.org/pdf/1804.06913.pdf
 for fileIN in datafiles:
     print("Appending %s" %fileIN)
     f = h5py.File(fileIN)
