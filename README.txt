@@ -1,12 +1,10 @@
 Datasets used for hep-applications of deep learning.
-Your code on Google Collab should start with the following commands to use these datasets.
+Your code on Google Collab should start with the following commands to load and prepare these datasets.
 
 import os
 import h5py
 import glob
 import numpy as np
-
-# To load the data into Collab, you can use the following code snippet
 
 ! git clone https://github.com/svt/jetdata.git
 
