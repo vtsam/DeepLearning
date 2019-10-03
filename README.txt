@@ -6,10 +6,9 @@ import h5py
 import glob
 import numpy as np
 
-# To load the data into Collab, you can use the following command
+# To load the data into Collab, you can use the following code snippet
 
 ! git clone https://github.com/svt/jetdata.git
-! ls tutorials/Data/JetDataset
 
 target = np.array([])
 features = np.array([])
