@@ -6,7 +6,7 @@ import h5py
 import glob
 import numpy as np
 
-! git clone https://github.com/svt/jetdata.git
+! git clone https://github.com/vtsam/jetdata.git
 
 target = np.array([])
 features = np.array([])
