@@ -1,5 +1,5 @@
 Datasets used for hep-applications of deep learning.
-Your code on Google Collab should start with the following commands to load and prepare these datasets.
+Your code on Google Colab should start with the following commands to load and prepare these datasets.
 
 import os
 import h5py
@@ -10,7 +10,7 @@ import numpy as np
 
 target = np.array([])
 features = np.array([])
-# We can't use all files on Collab, so we select a few of them
+# We can't use all files on Colab, so we select a few of them
 datafiles = ['jetdata/jetImage_7_100p_30000_40000.h5',
            'jetdata/jetImage_7_100p_60000_70000.h5',
             'jetdata/jetImage_7_100p_50000_60000.h5',
