@@ -14,11 +14,11 @@ import numpy as np
 target = np.array([])
 features = np.array([])
 # We can't use all files on Collab, so we select a few of them
-datafiles = ['tutorials/Data/JetDataset/jetImage_7_100p_30000_40000.h5',
-           'tutorials/Data/JetDataset/jetImage_7_100p_60000_70000.h5',
-            'tutorials/Data/JetDataset/jetImage_7_100p_50000_60000.h5',
-            'tutorials/Data/JetDataset/jetImage_7_100p_10000_20000.h5',
-            'tutorials/Data/JetDataset/jetImage_7_100p_0_10000.h5']
+datafiles = ['jetdata/jetImage_7_100p_30000_40000.h5',
+           'jetdata/jetImage_7_100p_60000_70000.h5',
+            'jetdata/jetImage_7_100p_50000_60000.h5',
+            'jetdata/jetImage_7_100p_10000_20000.h5',
+            'jetdata/jetImage_7_100p_0_10000.h5']
 
 for fileIN in datafiles:
     print("Appending %s" %fileIN)
