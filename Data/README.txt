@@ -6,16 +6,16 @@ import h5py
 import glob
 import numpy as np
 
-! git clone https://github.com/vtsam/jetdata.git
+! git clone https://github.com/vtsam/DeepLearning.git
 
 target = np.array([])
 features = np.array([])
 # We can't use all files on Colab, so we select a few of them.
-datafiles = ['jetdata/jetImage_7_100p_30000_40000.h5',
-           'jetdata/jetImage_7_100p_60000_70000.h5',
-            'jetdata/jetImage_7_100p_50000_60000.h5',
-            'jetdata/jetImage_7_100p_10000_20000.h5',
-            'jetdata/jetImage_7_100p_0_10000.h5']
+datafiles = ['DeepLearning/Data/jetImage_7_100p_30000_40000.h5',
+           'DeepLearning/Data/jetImage_7_100p_60000_70000.h5',
+            'DeepLearning/Data/jetImage_7_100p_50000_60000.h5',
+            'DeepLearning/Data/jetImage_7_100p_10000_20000.h5',
+            'DeepLearning/Data/jetImage_7_100p_0_10000.h5']
 # You don't have to worry about the features. If you're interested, you can take a look at the following papers:
 * https://arxiv.org/pdf/1709.08705.pdf
 * https://arxiv.org/pdf/1804.06913.pdf
