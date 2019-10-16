@@ -1,24 +1,29 @@
 Datasets used for hep-applications of deep learning.
-Your code on Google Colab should start with the following commands to load and prepare these datasets.
 
-import os
+Here is an example code snippet on how to load and prepare the data for your NN.
+
 import h5py
-import glob
 import numpy as np
 
 ! git clone https://github.com/vtsam/DeepLearning.git
 
 target = np.array([])
 features = np.array([])
-# We can't use all files on Colab, so we select a few of them.
+
+# We usually can't use all files on Colab, so we select a few of them.
+
 datafiles = ['DeepLearning/Data/jetImage_7_100p_30000_40000.h5',
            'DeepLearning/Data/jetImage_7_100p_60000_70000.h5',
             'DeepLearning/Data/jetImage_7_100p_50000_60000.h5',
             'DeepLearning/Data/jetImage_7_100p_10000_20000.h5',
             'DeepLearning/Data/jetImage_7_100p_0_10000.h5']
-# You don't have to worry about the features. If you're interested, you can take a look at the following papers:
+
+# For more info about the physics problem and the features, you can take a look at the following papers:
 * https://arxiv.org/pdf/1709.08705.pdf
 * https://arxiv.org/pdf/1804.06913.pdf
+
+# Of course, you don't have to use the same features as we select here. You can play with this when building your network.
+
 for fileIN in datafiles:
     print("Appending %s" %fileIN)
     f = h5py.File(fileIN)
