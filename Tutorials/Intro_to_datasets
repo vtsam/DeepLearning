@@ -6,12 +6,10 @@
 # h5py. To construct graphs, we use matplotlib.
 
 import h5py
-import glob
 import numpy as np
 import matplotlib.pyplot as plt
 
-# First import the data from github. To use shell commands, start the command 
-# line with !
+# First import the data from github. To use shell commands, start the command line with !
 
 ! git clone https://github.com/vtsam/DeepLearning.git
 
@@ -28,13 +26,15 @@ print(list(f.keys()))
 # 'jetConstituentList': list of the particles in the jet. For each of these particles, some relevant quantities are stored
 # 'particleFeatureNames': names of the quantities contained in 'jetConstituentList'
 # 'jetImage': image representation of the jet
-# 'jetImageECAL': ECAL-only image representation of the jet (ECAL stands for electromagnetic calorimeter, which is a device to measure energies of photons and electrons)
-# 'jetImageHCAL': HCAL-only image representation of the jet (HCAL stands for hadronic calorimeter, which is a device to measure energies of neutral and charged hadrons)
+# 'jetImageECAL': ECAL-only image representation of the jet (ECAL stands for electromagnetic calorimeter, which is a device 
+#                 to measure energies of photons and electrons)
+# 'jetImageHCAL': HCAL-only image representation of the jet (HCAL stands for hadronic calorimeter, which is a device to measure 
+#                  energies of neutral and charged hadrons)
 # 'jets': name of dataset under consideration
 # 'jetFeatureNames': names of quantities contained in 'jets'
 
-# Let's take a look at the features of the jets. We see that the list contains 59 elements. The first 53 are the discriminating quantities; the last ones represent
-# the ground truth (ie whether the jet comes from gluons, quarks, W, Z or t) 
+# Let's take a look at the features of the jets. We see that the list contains 59 elements. The first 53 are the discriminating 
+# quantities; the last ones represent the ground truth (ie whether the jet comes from gluons, quarks, W, Z or t) 
 
 featurenames = f.get('jetFeatureNames')
 print("Number of features:", len(featurenames))
@@ -102,7 +102,8 @@ for i in range(len(images)):
 particleData = f.get("jetConstituentList")
 print(particleData.shape)
 
-# The dataset has shape (10000,100,16): We have 10000 samples; only keep the first 100 particles with highest p_T and keep track of 16 features.
+# The dataset has shape (10000,100,16): We have 10000 samples; only keep the first 100 particles with highest p_T and 
+# keep track of 16 features.
 
 particleFeatures = f.get("particleFeatureNames")
 print(particleFeatures[:])
